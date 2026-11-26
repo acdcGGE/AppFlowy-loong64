@@ -1,0 +1,27 @@
+diff --git a/lib/src/editor/editor_component/service/ime/delta_input_service.dart b/lib/src/editor/editor_component/service/ime/delta_input_service.dart
+index d9f7ed00..a8c91ec2 100644
+--- a/lib/src/editor/editor_component/service/ime/delta_input_service.dart
++++ b/lib/src/editor/editor_component/service/ime/delta_input_service.dart
+@@ -22,6 +22,9 @@ class DeltaTextInputService extends TextInputService with DeltaTextInputClient {
+   @override
+   AutofillScope? get currentAutofillScope => throw UnimplementedError();
+ 
++  @override
++  bool onFocusReceived() => false;
++
+   @override
+   TextEditingValue? currentTextEditingValue;
+ 
+diff --git a/pubspec.yaml b/pubspec.yaml
+index 64eb61b5..634a1c77 100644
+--- a/pubspec.yaml
++++ b/pubspec.yaml
+@@ -21,7 +21,7 @@ dependencies:
+   flutter_svg: "^2.0.6"
+   html: ^0.15.5
+   http: "^1.2.0"
+-  intl: "^0.19.0"
++  intl: "^0.20.3"
+   keyboard_height_plugin: "^0.1.5"
+   logging: "^1.2.0"
+   markdown: "^7.2.1"

@@ -42,3 +42,4 @@ frontend/*.deb
 **/Cargo.toml.bak
 
 **/.cargo/**
+frontend/appflowy_flutter/pubspec_overrides.yaml
