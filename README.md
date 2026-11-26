@@ -9,6 +9,9 @@
 AppFlowy is the AI workspace where you achieve more without losing control of your data
 </p>
 
+> LoongArch64 构建见 [doc/loong64.md](doc/loong64.md)。
+
+
 <p align="center">
 <a href="https://discord.gg/9Q2xaN37tV"><img src="https://img.shields.io/badge/AppFlowy.IO-discord-orange"></a>
 <a href="https://github.com/AppFlowy-IO/appflowy"><img src="https://img.shields.io/github/stars/AppFlowy-IO/appflowy.svg?style=flat&logo=github&colorB=deeppink&label=stars"></a>

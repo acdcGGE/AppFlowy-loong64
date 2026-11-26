@@ -666,8 +666,8 @@ class _AFDropdownMenuState<T> extends State<AFDropdownMenu<T>> {
         ),
       );
     }
-    final InputDecorationTheme effectiveInputDecorationTheme =
-        widget.inputDecorationTheme ??
+    final InputDecorationThemeData effectiveInputDecorationTheme =
+        widget.inputDecorationTheme?.data ??
             theme.inputDecorationTheme ??
             defaults.inputDecorationTheme!;
 
@@ -1059,7 +1059,7 @@ class _DropdownMenuDefaultsM3 extends DropdownMenuThemeData {
   }
 
   @override
-  InputDecorationTheme get inputDecorationTheme {
-    return const InputDecorationTheme(border: OutlineInputBorder());
+  InputDecorationThemeData get inputDecorationTheme {
+    return const InputDecorationThemeData(border: OutlineInputBorder());
   }
 }

@@ -94,10 +94,10 @@ dependencies:
   image_picker: ^1.0.4
 
   #  third party packages
-  intl: ^0.19.0
+  intl: ^0.20.3
   json_annotation: ^4.8.1
   keyboard_height_plugin: ^0.1.5
-  leak_tracker: ^10.0.0
+  leak_tracker: ^11.0.1
   linked_scroll_controller: ^0.2.0
 
   # Notifications
@@ -149,13 +149,12 @@ dependencies:
   talker_bloc_logger: ^4.8.1
   talker: ^4.7.1
 
-  analyzer: 6.11.0
+  analyzer: ^7.3.0
 
   html: any
 dev_dependencies:
   # Introduce talker to log the bloc events, and only log the events in the development mode
 
-  bloc_test: ^10.0.0
   build_runner: ^2.4.9
   envied_generator: ^1.0.1
   flutter_lints: ^5.0.0
