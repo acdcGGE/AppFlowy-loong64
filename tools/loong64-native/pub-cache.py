@@ -7,11 +7,12 @@ import sys
 CACHE = os.environ.get("PUB_CACHE") or os.path.expanduser("~/.pub-cache")
 
 
-def pkg(name, version):
-    hits = glob.glob(os.path.join(CACHE, "hosted", "*", f"{name}-{version}"))
+def pkg_any(name):
+    """使用已下载的最新版本。"""
+    hits = sorted(glob.glob(os.path.join(CACHE, "hosted", "*", f"{name}-[0-9]*")))
     if not hits:
-        sys.exit(f"未找到 {name}-{version}，请先 flutter pub get")
-    return hits[0]
+        sys.exit(f"未找到 {name}，请先 flutter pub get")
+    return hits[-1]
 
 
 def edit(path, fn):
@@ -20,6 +21,8 @@ def edit(path, fn):
     if t != s:
         open(path, "w").write(t)
         print("patched", path)
+    else:
+        print("skip", path)
 
 
 def google_fonts(p):
@@ -103,11 +106,11 @@ def super_native(p):
 
 
 def main():
-    google_fonts(pkg("google_fonts", "6.3.0"))
-    value_layout(pkg("value_layout_builder", "0.4.0"))
-    extended_text(pkg("extended_text_field", "16.0.2"))
-    cross_cache(pkg("cross_cache", "0.0.6"))
-    super_native(pkg("super_native_extensions", "0.8.24"))
+    google_fonts(pkg_any("google_fonts"))
+    value_layout(pkg_any("value_layout_builder"))
+    extended_text(pkg_any("extended_text_field"))
+    cross_cache(pkg_any("cross_cache"))
+    super_native(pkg_any("super_native_extensions"))
     print("pub 缓存补丁完成")
 
 
