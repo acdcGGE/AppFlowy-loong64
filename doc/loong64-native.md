@@ -4,7 +4,7 @@
 
 ## 依赖
 
-- Flutter loong64 SDK（dart-loong64，3.47.4）
+- [Flutter loong64 SDK](https://github.com/dart-loong64/flutter/releases/)（dart-loong64，3.47.4）
 - Rust（rustup）与 `protoc`
 - `cmake` `ninja` `clang`/`gcc` `python3`
 - 运行期：GTK3、mpv（视频）
