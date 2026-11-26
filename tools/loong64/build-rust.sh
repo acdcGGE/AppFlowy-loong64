@@ -8,6 +8,8 @@ command -v protoc-gen-dart >/dev/null || dart pub global activate protoc_plugin 
 export CARGO_MAKE_WORKING_DIRECTORY="$REPO_ROOT/frontend"
 export FLUTTER_FLOWY_SDK_PATH="appflowy_flutter/packages/appflowy_backend"
 
+rustup target list --installed | grep -qx "$RUST_TARGET" || rustup target add "$RUST_TARGET"
+
 cd "$RUST_LIB"
 # 代码生成产物缺失时重跑 build.rs
 if [ ! -d "$APP_DIR/packages/appflowy_backend/lib/protobuf/flowy-folder" ]; then
